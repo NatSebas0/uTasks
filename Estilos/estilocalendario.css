@@ -1,0 +1,59 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container-fluid {
+    height: 100%;
+}
+
+.botones {
+    width: 50%;
+}
+
+.seleccionador-proyecto {
+    width: 35%;
+    border-color: black;
+}
+
+.arrow {
+    background: none;
+    cursor: pointer;
+}
+.calendario {
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    padding: 10px;
+}
+
+.nombre-dia {
+    border: 1px solid rgb(100, 100, 100);
+    font-weight: bold;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.dia {
+    border: 1px solid rgb(100, 100, 100);
+    padding: 10px;
+    box-sizing: border-box;
+    position: relative;
+    height: 100px;
+    vertical-align: top;
+}
+
+.numero-dia {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-weight: bold;
+}
+
+.row {
+    margin: 0;
+}
+
+.col {
+    padding: 0;
+}
