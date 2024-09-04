@@ -15,10 +15,6 @@ li {
     list-style: none;
 }
 
-h1 {
-    font-weight: 600;
-    font-size: 1.5rem;
-}
 
 body {
     font-family: 'Poppins', sans-serif;
@@ -26,6 +22,7 @@ body {
 
 .wrapper {
     display: flex;
+    
 }
 
 .main {
@@ -36,7 +33,11 @@ body {
     background-color: #f2f2f2;
 }
 
+.header{
+    background-color: white;
+}
 #sidebar {
+    
     width: 70px;
     min-width: 70px;
     z-index: 1000;
@@ -46,45 +47,16 @@ body {
     flex-direction: column;
 }
 
-#sidebar.expand {
-    width: 260px;
-    min-width: 260px;
-}
 
-.toggle-btn {
-    background-color: transparent;
-    cursor: pointer;
-    border: 0;
-    padding: 1rem 1.5rem;
-}
 
-.toggle-btn i {
-    font-size: 1.5rem;
-    color: #FFF;
-}
-
-.sidebar-logo {
-    margin: auto 0;
-}
-
-.sidebar-logo a {
-    color: #FFF;
-    font-size: 1.15rem;
-    font-weight: 600;
-}
-
-#sidebar:not(.expand) .sidebar-logo,
-#sidebar:not(.expand) a.sidebar-link span {
-    display: none;
-}
 
 .sidebar-nav {
-    padding: 2rem 0;
+    padding: 10px 0;
     flex: 1 1 auto;
 }
 
 a.sidebar-link {
-    padding: 10px 20px;
+    padding: 15px 20px;
     color: #ffffff;
     display: block;
     font-size: 0.9rem;
@@ -93,14 +65,14 @@ a.sidebar-link {
     
 }
 
-.sidebar-link svg {
-    margin-right: 10px;
-    
+.sidebar-link i {
+    margin-right: 5px;
+    font-size: 1.5rem;
 }
 
 a.sidebar-link:hover {
     background-color: #f2f2f2;
-    border-left: 3px solid #dd3b3b;
+    border-left: 8px solid #dd3b3b;
     color: #000000;
 }
 
@@ -108,45 +80,16 @@ a.sidebar-link:hover {
     position: relative;
 }
 
-#sidebar:not(.expand) .sidebar-item .sidebar-dropdown {
-    position: absolute;
-    top: 0;
-    left: 70px;
-    background-color: #0e2238;
-    padding: 0;
-    min-width: 15rem;
-    display: none;
+.lista-opciones {
+    
+
+}
+.despliegue-herramientas{
+    min-height: 100vh;
+    font-size: 500px;
+    text-align: center;
 }
 
-#sidebar:not(.expand) .sidebar-item:hover .has-dropdown+.sidebar-dropdown {
-    display: block;
-    max-height: 15em;
-    width: 100%;
-    opacity: 1;
-}
-
-#sidebar.expand .sidebar-link[data-bs-toggle="collapse"]::after {
-    border: solid;
-    border-width: 0 .075rem .075rem 0;
-    content: "";
-    display: inline-block;
-    padding: 2px;
-    position: absolute;
-    right: 1.5rem;
-    top: 1.4rem;
-    transform: rotate(-135deg);
-    transition: all .2s ease-out;
-}
-
-#sidebar.expand .sidebar-link[data-bs-toggle="collapse"].collapsed::after {
-    transform: rotate(45deg);
-    transition: all .2s ease-out;
-}
-
-.logo-principal{
- padding: 5px 20px;
-}
-
-.header{
-    background-color: #ffffff;
+.lista{
+    background-color: white;
 }
