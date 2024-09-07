@@ -10,6 +10,10 @@ body {
     max-height: 200px; /* Ajusta la altura de las imágenes */
     object-fit: cover; /* Asegura que la imagen cubra el área sin deformarse */
   }
+.card-carr{
+    max-height: 170px; /* Ajusta la altura de las imágenes */
+    object-fit: cover;  
+}
 
   .icon-star{
     width: 40px;
@@ -25,7 +29,7 @@ body {
   }
 
   .principal-top{
-    background-color: #ffff ;
+    background-color: #ffffff ;
     box-shadow: 1px -6px 15px 0px rgba(0, 0, 0, 0.3); /* Personalización de la sombra */
 
   }
