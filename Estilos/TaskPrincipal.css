@@ -1,0 +1,75 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+
+body {
+    font-family: "Lato", sans-serif;
+  }
+
+.card-img-top {
+    max-height: 200px; /* Ajusta la altura de las imágenes */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin deformarse */
+  }
+.card-carr{
+    max-height: 170px; /* Ajusta la altura de las imágenes */
+    object-fit: cover;  
+}
+
+  .icon-star{
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 99px;
+   margin-left: 5px;
+   margin-top: 5px;
+  }
+  .icon-star i{
+    font-size: 20px;
+    color: #131313;
+  }
+
+  .principal-top{
+    background-color: #ffffff ;
+    box-shadow: 1px -6px 15px 0px rgba(0, 0, 0, 0.3); /* Personalización de la sombra */
+
+  }
+
+  .contenedor-principal{
+    height: 100vh;
+    overflow-y: auto;
+  }
+  
+  .card-utp{
+    background-color: #079eb6;
+  }
+
+  .card-utp i{
+    font-size: 60px;
+    color: white;
+  }
+
+.card-tasks{
+    background-color: #ffffff;
+}
+.card-tasks i{
+
+    font-size: 60px;
+    color: rgb(11, 167, 99); 
+}
+.numero-tareas{
+    font-size: 60px;
+    color: white;
+}
+
+.card-tareas{
+    background-color: #010127;
+}
+
+.card{
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.card-proyecto:hover{
+    transform: scale(1.03);
+}
