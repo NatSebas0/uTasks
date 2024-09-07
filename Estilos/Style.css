@@ -56,9 +56,9 @@ a.sidebar-link {
 }
 
 a.sidebar-link:hover {
-    background-color: #f2f2f2;
+    background-color: #0729b2;
     border-left: 8px solid #0e3ff1;
-    color: #000000;
+   
 }
 
 .sidebar-item {
