@@ -15,11 +15,9 @@ li {
     list-style: none;
 }
 
-
-body {
-    font-family: 'Poppins', sans-serif;
+body{
+    background-color: #f3f3f3;
 }
-
 .wrapper {
     display: flex;
     
@@ -67,3 +65,36 @@ a.sidebar-link:hover {
     position: relative;
 }
 
+.profile-section {
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.profile-section img {
+    border-radius: 50%;
+    max-width: 50px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.profile-section h5 {
+    font-size: 0.9rem;
+    color: white;
+    margin: 0;
+}
+
+.profile-section .dropdown-menu {
+    background-color: #001f3f;
+    border: none;
+}
+
+.profile-section .dropdown-menu .dropdown-item {
+    color: white;
+}
+
+.profile-section .dropdown-menu .dropdown-item:hover {
+    background-color: #004080;
+    color: white;
+}
