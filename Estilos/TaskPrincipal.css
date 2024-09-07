@@ -60,3 +60,12 @@ body {
 .card-tareas{
     background-color: #010127;
 }
+
+.card{
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.card-proyecto:hover{
+    transform: scale(1.03);
+}

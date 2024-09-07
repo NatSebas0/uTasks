@@ -32,7 +32,7 @@ body {
     height: 100vh;
     z-index: 1000;
     transition: all .25s ease-in-out;
-    background-color: #010127;
+    background-color: #000428;
     display: flex;
     flex-direction: column;
 }
