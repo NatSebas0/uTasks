@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+::after,
+::before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+body{
+    background-color: #f3f3f3;
+}
+.wrapper {
+    display: flex;
+    
+}
+
+#sidebar {
+    
+    width: 70px;
+    min-width: 70px;
+    height: 100vh;
+    z-index: 1000;
+    transition: all .25s ease-in-out;
+    background-color: #000428;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-nav {
+    padding: 10px 0;
+    flex: 1 1 auto;
+}
+
+a.sidebar-link {
+    padding: 15px 20px;
+    color: #ffffff;
+    display: block;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    border-left: 3px solid transparent;
+    
+}
+
+.sidebar-link i {
+    margin-right: 5px;
+    font-size: 1.5rem;
+}
+
+a.sidebar-link:hover {
+    background-color: #0729b2;
+    border-left: 8px solid #0e3ff1;
+   
+}
+
+.sidebar-item {
+    position: relative;
+}
+
+.profile-section {
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+
+.profile-section img {
+    border-radius: 50%;
+    max-width: 50px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 5px;
+}
+
+.profile-section h5 {
+    font-size: 0.9rem;
+    color: white;
+    margin: 0;
+}
+
+.profile-section .dropdown-menu {
+    background-color: #001f3f;
+    border: none;
+}
+
+.profile-section .dropdown-menu .dropdown-item {
+    color: white;
+}
+
+.profile-section .dropdown-menu .dropdown-item:hover {
+    background-color: #004080;
+    color: white;
+}

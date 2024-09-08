@@ -1,0 +1,109 @@
+.sidebar-herramientas{
+    background-color: #fff;
+    height: 100vh;
+    min-width: 200px;
+    z-index: 1000;
+}
+
+
+.btn-side{
+    background-color: hsl(254, 100%, 96%);
+    color: black;
+}
+
+.btn-side:hover{
+    background-color: #5664e6;
+    color: white;
+}
+
+.btn-press{
+    background-color: #5664e6;
+    color: white;
+}
+.icon-pr{
+    border-radius: 99px;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(45, 105, 218);
+}
+
+
+a{
+    color: inherit; /* Hereda el color del elemento padre */
+    ;
+}
+
+.custom-context-menu {
+    position: absolute;
+    z-index: 1000;
+    display: none;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.custom-context-menu ul {
+    list-style-type: none;
+    padding: 10px;
+    margin: 0;
+}
+.custom-context-menu ul li {
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.custom-context-menu ul li:hover {
+    background-color: #f0f0f0;
+}
+tbody td:hover {
+    border: 2px solid #007bff;
+    background-color: #f9f9f9;
+}
+tbody tr:hover {
+    background-color: #ffffff;
+}
+#nameInput {
+    display: none; /* Ocultar el input por defecto */
+}
+.input-container {
+    display: inline-block;
+    position: relative;
+}
+.input-container input {
+    display: none; /* Ocultar el input por defecto */
+    width: 200px;
+}
+.input-container button {
+    display: inline-block;
+}
+
+
+.arriba-tabla{
+    background-color: #5664e6;
+    color:#fff;
+}
+
+.texto-side{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('https://i.pinimg.com/originals/26/22/8a/26228ae2f4eeb68e5c593b25c82e7b83.gif');    background-size: cover; /* Ajusta la imagen para cubrir todo el div sin deformarse */
+    background-position: center; /* Centra la imagen en el div */
+    background-repeat: no-repeat;
+    height: 68px;
+}
+
+.icon-side{
+    font-size: 25px;
+}
+
+#nameInput{
+    padding: 12px;
+    margin-right: 12px;
+    width: 225px;
+  
+    border-radius: 4px;
+    border: none;
+  
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+    background: white;
+  
+    font-size: 14px;
+    outline: none;
+}
