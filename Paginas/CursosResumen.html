@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="../Estilos/Inicio-Estilo.css" />
     <link rel="stylesheet" href="../Estilos/TaskPrincipal.css" />
     <link rel="stylesheet" href="../Estilos/TaskCursos.css" />
+    <link rel="stylesheet" href="../Estilos/Drag.css" />
     <script type="text/javascript">
       window.onload = () => {
         const modal = new bootstrap.Modal("#modalTutorial");
@@ -177,10 +178,10 @@
               </div>
 
               <div class="text-center">
-                <a href="">
+                <a href="Cursos.html">
                   <button
                     type="button"
-                    class="btn w-75 mb-4 btn-press btn-side text-start"
+                    class="btn w-75 mb-4 btn-side text-start"
                   >
                     <i class="bi bi-bookmark-check-fill pe-3"></i
                     ><strong>Tareas</strong>
@@ -198,25 +199,29 @@
                 <a href="CursosResumen.html">
                   <button
                     type="button"
-                    class="btn w-75 mb-4 btn-side text-start"
+                    class="btn w-75 mb-4 btn-press  btn-side text-start"
                   >
                     <i class="bi bi-bar-chart-line-fill pe-3"></i>
                     <strong>Resumen</strong>
                   </button>
                 </a>
                 <a href="CursosConfi.html">
-                  <button type="button" class="btn w-75 mb-4 btn-side text-start">
+                  <button
+                    type="button"
+                    class="btn w-75 mb-4 btn-side text-start"
+                  >
                     <i class="bi bi-gear-fill pe-3"></i>
                     <strong>Configuracion</strong>
                   </button>
-
                 </a>
                 <a href="CursosIntegrantes.html">
-                  <button type="button" class="btn w-75 mb-4 btn-side text-start">
+                  <button
+                    type="button"
+                    class="btn w-75 mb-4 btn-side text-start"
+                  >
                     <i class="bi bi-person-lines-fill pe-3"></i>
                     <strong>Equipo</strong>
                   </button>
-
                 </a>
               </div>
             </div>
@@ -230,67 +235,8 @@
               </section>
               <!-- Principal bootom -->
               <section class="col-12">
-                <div class="container-fluid mt-2 ms-0">
-                  <div class="input-container">
-                    <button class="btn btn-primary" id="addTaskBtn">
-                      Ingresar Tarea
-                    </button>
-                    <input
-                      type="text"
-                      id="nameInput"
-                      placeholder="Ingresar nombre"
-                    />
-                  </div>
-                  <table class="table table-bordered mt-3">
-                    <thead>
-                      <tr>
-                        <th>Nombre</th>
-                        <th>Estado</th>
-                        <th>Prioridad</th>
-                        <th>Fecha Límite</th>
-                        <th>Días Restantes</th>
-                        <th>Asignado a</th>
-                        <th>Acciones</th>
-                      </tr>
-                    </thead>
-                    <tbody id="taskTableBody" class="bg-white"></tbody>
-                  </table>
-                </div>
-
-                <!-- Menú contextual personalizado -->
-                <div id="customContextMenu" class="custom-context-menu">
-                  <ul>
-                    <li id="contextDescription">Descripción</li>
-                    <li id="contextDelete">Eliminar</li>
-                  </ul>
-                </div>
-
-                <!-- Off-canvas para Descripción -->
-                <div
-                  class="offcanvas offcanvas-end"
-                  tabindex="-1"
-                  id="descriptionOffCanvas"
-                  aria-labelledby="offcanvasRightLabel"
-                >
-                  <div class="offcanvas-header">
-                    <h5 id="offcanvasRightLabel">
-                      Descripción y Nombre de la Tarea
-                    </h5>
-                    <button
-                      type="button"
-                      class="btn-close"
-                      data-bs-dismiss="offcanvas"
-                      aria-label="Close"
-                    ></button>
-                  </div>
-                  <div class="offcanvas-body">
-                    <textarea
-                      id="taskDescription"
-                      class="form-control"
-                      rows="5"
-                      placeholder="Escribe la descripción de la tarea..."
-                    ></textarea>
-                  </div>
+                <div>
+                  <img src="../assets/img/Screenshot 2024-09-07 211538.png" height="100%" alt="">
                 </div>
               </section>
             </div>
@@ -395,6 +341,9 @@
     <script src="../Js/Ejemplos.js"></script>
     <script src="../Js/sidebar.js"></script>
     <script src="../Js/script-tablas.js"></script>
+    <script src="../Js/codigo-drag.js"></script>
+    <script src="../Js/tabla.js"></script>
+
     <script>
       feather.replace();
     </script>

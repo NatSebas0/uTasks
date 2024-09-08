@@ -30,6 +30,7 @@ body {
 
   .principal-top{
     background-color: #150546 ;
+    background-image: url();
     box-shadow: 1px -6px 15px 0px rgba(0, 0, 0, 0.3); /* Personalización de la sombra */
 
   }
