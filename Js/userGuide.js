@@ -22,7 +22,7 @@ function startTour() {
                 intro: 'Notificaciones sobre fechas límite de tareas o proyectos.'
             },
             {
-                element: '#startTourBtn',
+                element: '#info',
                 intro: 'Si deseas volver a ver este tutorial.'
             },
             {
@@ -49,9 +49,19 @@ function startTour() {
     }).start();
 }
 
+// Verificar si el tutorial ya se ha visto
+function checkFirstVisit() {
+    if (!localStorage.getItem('introShown')) {
+        // Si no se ha mostrado antes, iniciar el tour y marcar como visto
+        startTour();
+        localStorage.setItem('introShown', 'true');
+    }
+}
+
+// Ejecutar el tour la primera vez que se carga la página
 window.onload = function() {
-    startTour(); 
+    checkFirstVisit(); // Verificar si es la primera visita
 };
 
-
+// Asignar evento click al botón para reiniciar el tour
 document.getElementById('startTourBtn').addEventListener('click', startTour);
