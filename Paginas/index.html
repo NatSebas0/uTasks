@@ -14,6 +14,8 @@
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/7.2.0/introjs.min.css">
+
     <link rel="stylesheet" href="../Estilos/Style.css" />
     <link
       rel="stylesheet"
@@ -69,6 +71,7 @@
         <ul class="sidebar-nav">
           <li class="sidebar-item">
             <a
+              id="home"
               href="index.html"
               class="sidebar-link"
               class="sidebar-link"
@@ -79,7 +82,7 @@
               <i class="bi bi-house"></i>
             </a>
           </li>
-          <li class="sidebar-item">
+          <li class="sidebar-item" id="calendario">
             <a
               href="calendario.html"
               class="sidebar-link"
@@ -91,6 +94,7 @@
             </a>
           </li>
           <li
+            id="tarea"
             class="sidebar-item"
             class="sidebar-link"
             data-bs-toggle="tooltip"
@@ -102,7 +106,7 @@
             </a>
           </li>
 
-          <li class="sidebar-item">
+          <li class="sidebar-item" id="notif">
             <a
               href="#"
               class="sidebar-link"
@@ -120,6 +124,7 @@
         </ul>
         <div class="sidebar-footer">
           <a
+            id="info"
             href="#"
             class="sidebar-link"
             class="sidebar-link"
@@ -204,14 +209,17 @@
                   <!-- Botones -->
                   <div class="col text-end">
                     <button
+                      id="btnCrearProyecto"
                       type="button"
                       class="btn btn-success"
                       data-bs-toggle="modal"
                       data-bs-target="#crearProyectoModal"
+                      
                     >
                       <i class="bi bi-plus-circle-fill me-2"></i> Crear Proyecto
                     </button>
                     <button
+                      id="btnUnirseProyecto"
                       type="button"
                       class="btn btn-primary"
                       data-bs-toggle="modal"
@@ -226,7 +234,7 @@
                 <div class="row mt-3 g-3">
                   <!-- Card 1 -->
                   
-                       <div class="col-12 col-md-6 col-lg-4">
+                       <div class="col-12 col-md-6 col-lg-4" id="projectCard">
                         <a href="Cursos.html" class="link-card">
                             <div class="card shadow card-proyecto">
                               <!-- Img card -->
@@ -255,7 +263,7 @@
                                     </div>
                                   </div>
                                   <div class="col text-end">
-                                    <div>Avanze 4</div>
+                                    <div>Avance 4</div>
                                     <div>
                                       <span class="badge bg-info">17 dias</span>
                                     </div>
@@ -304,7 +312,7 @@
                                 </div>
                               </div>
                               <div class="col text-end">
-                                <div>Avanze 4</div>
+                                <div>Avance 4</div>
                                 <div>
                                   <span class="badge bg-info">17 dias</span>
                                 </div>
@@ -353,7 +361,7 @@
                                 </div>
                               </div>
                               <div class="col text-end">
-                                <div>Avanze 4</div>
+                                <div>Avance 4</div>
                                 <div>
                                   <span class="badge bg-info">17 dias</span>
                                 </div>
@@ -402,7 +410,7 @@
                                 </div>
                               </div>
                               <div class="col text-end">
-                                <div>Avanze 4</div>
+                                <div>Avance 4</div>
                                 <div>
                                   <span class="badge bg-info">17 dias</span>
                                 </div>
@@ -452,7 +460,7 @@
                                 </div>
                               </div>
                               <div class="col text-end">
-                                <div>Avanze 4</div>
+                                <div>Avance 4</div>
                                 <div>
                                   <span class="badge bg-info">17 dias</span>
                                 </div>
@@ -500,7 +508,7 @@
                                 </div>
                               </div>
                               <div class="col text-end">
-                                <div>Avanze 4</div>
+                                <div>Avance 4</div>
                                 <div>
                                   <span class="badge bg-info">17 dias</span>
                                 </div>
@@ -524,7 +532,7 @@
               <!-- Principal derecha -->
               <div class="col-3">
                 <!-- Card utp -->
-                <div class="row card-utp mb-3 mt-3 rounded">
+                <div class="row card-utp mb-3 mt-3 rounded" id="semana">
                   <div class="col mt-1 mb-3">
                     <i class="bi bi-clock-fill"></i>
                     <p class="h3 mb-0 fw-bold text-white">Semana 4</p>
@@ -535,7 +543,7 @@
                   </div>
                 </div>
                 <!-- Card tareas -->
-                <div class="row card-tasks mb-3 rounded">
+                <div class="row card-tasks mb-3 rounded" id="tareaPersonal">
                   <div class="col-3">
                     <i class="bi bi-check-circle-fill"></i>
                   </div>
@@ -549,7 +557,7 @@
                   </div>
                 </div>
                 <!-- Card tareas pendientes -->
-                <div class="card">
+                <div class="card" id="trabajoFechaCard">
                   <!-- Head -->
                   <div
                     class="card-header py-3 d-flex justify-content-between border-bottom-0 card-tareas"
@@ -759,6 +767,8 @@
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/7.2.0/intro.min.js"></script>
+    <script src="../Js/userGuide.js"></script>
     <script src="../Js/Ejemplos.js"></script>
     <script src="../Js/sidebar.js"></script>
     <script>
