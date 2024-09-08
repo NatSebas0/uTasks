@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="../Estilos/Inicio-Estilo.css" />
     <link rel="stylesheet" href="../Estilos/TaskPrincipal.css" />
     <link rel="stylesheet" href="../Estilos/TaskCursos.css" />
+    <link rel="stylesheet" href="../Estilos/Drag.css" />
     <script type="text/javascript">
       window.onload = () => {
         const modal = new bootstrap.Modal("#modalTutorial");
@@ -177,10 +178,10 @@
               </div>
 
               <div class="text-center">
-                <a href="">
+                <a href="Cursos.html">
                   <button
                     type="button"
-                    class="btn w-75 mb-4 btn-press btn-side text-start"
+                    class="btn w-75 mb-4  btn-side text-start"
                   >
                     <i class="bi bi-bookmark-check-fill pe-3"></i
                     ><strong>Tareas</strong>
@@ -189,7 +190,7 @@
                 <a href="Cursos -drag.html">
                   <button
                     type="button"
-                    class="btn w-75 mb-4 btn-side text-start"
+                    class="btn w-75 mb-4 btn-press  btn-side text-start"
                   >
                     <i class="bi bi-clipboard-fill pe-3"></i
                     ><strong>Tablero</strong>
@@ -230,66 +231,126 @@
               </section>
               <!-- Principal bootom -->
               <section class="col-12">
-                <div class="container-fluid mt-2 ms-0">
-                  <div class="input-container">
-                    <button class="btn btn-primary" id="addTaskBtn">
-                      Ingresar Tarea
-                    </button>
+                <div class="board">
+                  <form id="todo-form">
                     <input
                       type="text"
-                      id="nameInput"
-                      placeholder="Ingresar nombre"
+                      placeholder="Nombre tarea"
+                      id="todo-input"
                     />
-                  </div>
-                  <table class="table table-bordered mt-3">
-                    <thead>
-                      <tr>
-                        <th>Nombre</th>
-                        <th>Estado</th>
-                        <th>Prioridad</th>
-                        <th>Fecha Límite</th>
-                        <th>Días Restantes</th>
-                        <th>Asignado a</th>
-                        <th>Acciones</th>
-                      </tr>
-                    </thead>
-                    <tbody id="taskTableBody" class="bg-white"></tbody>
-                  </table>
-                </div>
+                    <button type="submit">Agregar</button>
+                  </form>
 
-                <!-- Menú contextual personalizado -->
-                <div id="customContextMenu" class="custom-context-menu">
-                  <ul>
-                    <li id="contextDescription">Descripción</li>
-                    <li id="contextDelete">Eliminar</li>
-                  </ul>
-                </div>
+                  <div class="row lanes">
+                    <div class="col swim-lane" id="todo-lane">
+                      <span class="badge bg-secondary">Sin empezar</span>
 
-                <!-- Off-canvas para Descripción -->
-                <div
-                  class="offcanvas offcanvas-end"
-                  tabindex="-1"
-                  id="descriptionOffCanvas"
-                  aria-labelledby="offcanvasRightLabel"
-                >
-                  <div class="offcanvas-header">
-                    <h5 id="offcanvasRightLabel">
-                      Descripción y Nombre de la Tarea
-                    </h5>
-                    <button
-                      type="button"
-                      class="btn-close"
-                      data-bs-dismiss="offcanvas"
-                      aria-label="Close"
-                    ></button>
-                  </div>
-                  <div class="offcanvas-body">
-                    <textarea
-                      id="taskDescription"
-                      class="form-control"
-                      rows="5"
-                      placeholder="Escribe la descripción de la tarea..."
-                    ></textarea>
+                      <div
+                        class="task border-start border-5 border-dark"
+                        draggable="true"
+                      >
+                        <div class="d-flex align-items-center flex-fill">
+                          <div class="d-flex flex-column pe-3">
+                            <h6 class="fw-bold mb-0 small-14">Maquetacion</h6>
+                          </div>
+                          <i class="bi bi-clipboard2-check"></i>
+                        </div>
+                        <div class="">
+                          <span class="badge bg-info">tiempo</span>
+                        </div>
+                      </div>
+                      <div
+                        class="task border-start border-5 border-dark"
+                        draggable="true"
+                      >
+                        <div class="d-flex align-items-center flex-fill">
+                          <div class="d-flex flex-column pe-3">
+                            <h6 class="fw-bold mb-0 small-14">
+                              Comprarle su gaseosa al profe
+                            </h6>
+                          </div>
+                          <i class="bi bi-clipboard2-check"></i>
+                        </div>
+                        <div class="">
+                          <span class="badge bg-info">tiempo</span>
+                        </div>
+                      </div>
+                      <div
+                        class="task border-start border-5 border-dark"
+                        draggable="true"
+                      >
+                        <div class="d-flex align-items-center flex-fill">
+                          <div class="d-flex flex-column pe-3">
+                            <h6 class="fw-bold mb-0 small-14">
+                              Invadir España
+                            </h6>
+                          </div>
+                          <i class="bi bi-clipboard2-check"></i>
+                        </div>
+                        <div class="">
+                          <span class="badge bg-info">tiempo</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col swim-lane">
+                      <span class="badge bg-warning">En desarrollo </span>
+
+                      <div
+                        class="task border-start border-5 border-dark"
+                        draggable="true"
+                      >
+                        <div class="d-flex align-items-center flex-fill">
+                          <div class="d-flex flex-column pe-3">
+                            <h6 class="fw-bold mb-0 small-14">
+                              Crear el login
+                            </h6>
+                          </div>
+                          <i class="bi bi-clipboard2-check"></i>
+                        </div>
+                        <div class="">
+                          <span class="badge bg-info">tiempo</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col swim-lane">
+                      <span class="badge bg-primary">Revision</span>
+                      <div
+                        class="task border-start border-5 border-dark"
+                        draggable="true"
+                      >
+                        <div class="d-flex align-items-center flex-fill">
+                          <div class="d-flex flex-column pe-3">
+                            <h6 class="fw-bold mb-0 small-14">Langind page</h6>
+                          </div>
+                          <i class="bi bi-clipboard2-check"></i>
+                        </div>
+                        <div class="">
+                          <span class="badge bg-info">tiempo</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col swim-lane">
+                      <span class="badge bg-success">Terminado</span>
+
+                      <div
+                        class="task border-start border-5 border-dark"
+                        draggable="true"
+                      >
+                        <div class="d-flex align-items-center flex-fill">
+                          <div class="d-flex flex-column pe-3">
+                            <h6 class="fw-bold mb-0 small-14">
+                              Terminar ejercicios de js
+                            </h6>
+                          </div>
+                          <i class="bi bi-clipboard2-check"></i>
+                        </div>
+                        <div class="">
+                          <span class="badge bg-info">Tiempo</span>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </section>
@@ -395,6 +456,9 @@
     <script src="../Js/Ejemplos.js"></script>
     <script src="../Js/sidebar.js"></script>
     <script src="../Js/script-tablas.js"></script>
+    <script src="../Js/codigo-drag.js"></script>
+    <script src="../Js/tabla.js"></script>
+
     <script>
       feather.replace();
     </script>
