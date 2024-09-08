@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sidebar With Bootstrap</title>
+    <link href="https://cdn.lineicons.com/4.0/lineicons.css" rel="stylesheet" />
+    <script src="https://unpkg.com/feather-icons"></script>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/7.2.0/introjs.min.css"
+    />
+
+    <link rel="stylesheet" href="../Estilos/Style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="../Estilos/Inicio-Estilo.css" />
+    <link rel="stylesheet" href="../Estilos/TaskPrincipal.css" />
+    <script type="text/javascript">
+      window.onload = () => {
+        const modal = new bootstrap.Modal("#modalTutorial");
+        modal.show();
+      };
+    </script>
+  </head>
+
+  <body>
+    <!-- offcanva notificaciones -->
+    <div class="offcanvas offcanvas-end" id="demo">
+      <div class="offcanvas-header">
+        <h1 class="offcanvas-title">Notificaciones</h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="alert alert-info">
+          <strong>Info!</strong> You should
+          <a href="#" class="alert-link">read this message</a>.
+        </div>
+        <div class="alert alert-info">
+          <strong>Info!</strong> You should
+          <a href="#" class="alert-link">read this message</a>.
+        </div>
+        <div class="alert alert-info">
+          <strong>Info!</strong> You should
+          <a href="#" class="alert-link">read this message</a>.
+        </div>
+        <div class="alert alert-info">
+          <strong>Info!</strong> You should
+          <a href="#" class="alert-link">read this message</a>.
+        </div>
+        <button class="btn btn-secondary" type="button">Salir</button>
+      </div>
+    </div>
+    <!--Container  -->
+    <div class="wrapper">
+      <!-- Sidebar -->
+      <aside id="sidebar">
+        <ul class="sidebar-nav">
+          <li class="sidebar-item">
+            <a
+              id="home"
+              href="#"
+              class="sidebar-link"
+              class="sidebar-link"
+              data-bs-toggle="tooltip"
+              data-bs-placement="right"
+              title="principal"
+            >
+              <i class="bi bi-house"></i>
+            </a>
+          </li>
+          <li class="sidebar-item" id="calendario">
+            <a
+              href="calendario.html"
+              class="sidebar-link"
+              data-bs-toggle="tooltip"
+              data-bs-placement="right"
+              title="Calendario"
+            >
+              <i class="bi bi-calendar3"></i>
+            </a>
+          </li>
+          <li
+            id="tarea"
+            class="sidebar-item"
+            class="sidebar-link"
+            data-bs-toggle="tooltip"
+            data-bs-placement="right"
+            title="Tareas"
+          >
+            <a href="#" class="sidebar-link">
+              <i class="bi bi-clipboard2-check"></i>
+            </a>
+          </li>
+
+          <li class="sidebar-item" id="notif">
+            <a
+              href="#"
+              class="sidebar-link"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#demo"
+              class="sidebar-link"
+              data-bs-toggle="tooltip"
+              data-bs-placement="right"
+              title="Notificaciones"
+            >
+              <i class="bi bi-bell"></i>
+            </a>
+          </li>
+        </ul>
+        <div class="sidebar-footer">
+          <a
+            id="startTourBtn"
+            href="#"
+            type="btn"
+            class="sidebar-link"
+            data-bs-toggle="tooltip"
+            data-bs-placement="right"
+            title="Informacion"
+          >
+            <i  class="bi bi-question-circle"></i>
+          </a>
+        </div>
+        <div class="profile-section dropdown">
+          <img
+            src="https://via.placeholder.com/50"
+            alt="Profile Image"
+            id="profileDropdown"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          />
+          <ul class="dropdown-menu" aria-labelledby="profileDropdown">
+            <li>
+              <a
+                class="dropdown-item"
+                data-bs-toggle="modal"
+                data-bs-target="#editProfileModal"
+                type="button"
+                href="#"
+                >Ajustes de Perfil</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item" href="Pagina-Login.html"
+                >Cerrar Sesión</a
+              >
+            </li>
+          </ul>
+        </div>
+      </aside>
+      <!-- Principal -->
+      <main class="container-fluid contenedor-principal">
+        <div class="row">
+          <!-- Principal Top -->
+          <section class="col-12 principal-top p-2">
+            <img src="../assets/icons/logo white.svg" alt="" width="130" />
+          </section>
+          <!-- Principal bootom -->
+          <section class="col-12">
+            <div class="row">
+              <!-- Principal izquierda -->
+              <div class="col-9 p-3">
+                <!-- Carousel -->
+                <div id="demo" class="carousel slide" data-bs-ride="carousel">
+                  <!-- Indicators/dots -->
+                  <div class="carousel-indicators">
+                    <button
+                      type="button"
+                      data-bs-target="#demo"
+                      data-bs-slide-to="0"
+                      class="active"
+                    ></button>
+                    <button
+                      type="button"
+                      data-bs-target="#demo"
+                      data-bs-slide-to="1"
+                    ></button>
+                    <button
+                      type="button"
+                      data-bs-target="#demo"
+                      data-bs-slide-to="2"
+                    ></button>
+                  </div>
+
+                  <!-- The slideshow/carousel -->
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                      <img
+                        src="https://pa1.aminoapps.com/6610/9ee2040c3b84ee99ad014401e0a77b498aa6a940_00.gif"
+                        alt="Los Angeles"
+                        class="d-block card-carr"
+                        style="width: 100%"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="https://i.pinimg.com/originals/eb/50/87/eb50875a68b04b0480fa929af2c7547c.gif"
+                        alt="Chicago"
+                        class="d-block card-carr"
+                        style="width: 100%"
+                      />
+                    </div>
+                    <div class="carousel-item">
+                      <img
+                        src="https://preview.redd.it/0w8k67nd28971.gif?width=500&auto=webp&s=f5182e498e9e0c1cc8be9dd5e86d77783c9a7897"
+                        alt="New York"
+                        class="d-block card-carr"
+                        style="width: 100%"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Left and right controls/icons -->
+                </div>
+                <!-- Titulo/ Botones -->
+                <div class="row mt-4">
+                  <!-- Titulo -->
+                  <div class="col">
+                    <div class="d-flex align-items-center">
+                      <p class="h3 me-4"><strong>Proyectos </strong></p>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        placeholder="Buscar Proyecto"
+                        name="email"
+                      />
+                    </div>
+                  </div>
+                  <!-- Botones -->
+                  <div class="col text-end">
+                    <button
+                      id="btnCrearProyecto"
+                      type="button"
+                      class="btn btn-success"
+                      data-bs-toggle="modal"
+                      data-bs-target="#crearProyectoModal"
+                    >
+                      <i class="bi bi-plus-circle-fill me-2"></i> Crear Proyecto
+                    </button>
+                    <button
+                      id="btnUnirseProyecto"
+                      type="button"
+                      class="btn btn-primary"
+                      data-bs-toggle="modal"
+                      data-bs-target="#unirteProyectoModal"
+                    >
+                      <i class="bi bi-plus-circle-fill me-2"></i> Unirte a
+                      Proyecto
+                    </button>
+                  </div>
+                </div>
+                <!-- Proyectos cards -->
+                <div class="row mt-3 g-3">
+                  <!-- Card 1 -->
+
+                  <div class="col-12 col-md-6 col-lg-4" id="projectCard">
+                    <a href="Cursos.html" class="link-card">
+                      <div class="card shadow card-proyecto">
+                        <!-- Img card -->
+                        <img
+                          class="card-img-top"
+                          src="https://media.istockphoto.com/id/1291339958/es/vector/ilustraci%C3%B3n-vectorial-del-concepto-de-gesti%C3%B3n-de-proyectos-equipo-de-negocio-que-trabaja.jpg?s=612x612&w=0&k=20&c=CQT5a5lXn1PE_fKzQpR9OgeUEoC7uXEX4EZ4yF0Mpq8="
+                          alt=""
+                        />
+                        <!-- Poner encima de la imagen -->
+                        <div class="card-img-overlay icon-star"></div>
+                        <!-- Contenido card -->
+                        <div class="card-body">
+                          <h5 class="card-title">
+                            <strong>Marco de desarrollo Web</strong>
+                          </h5>
+                          <p class="card-text">Utp+Tasks.</p>
+                          <div class="row">
+                            <div class="col">
+                              <div>
+                                <i class="bi bi-archive"></i>
+                                <span> 4 Tareas</span>
+                              </div>
+                              <div>
+                                <i class="bi bi-people"></i>
+                                <span> 7 integrantes</span>
+                              </div>
+                            </div>
+                            <div class="col text-end">
+                              <div>Avance 4</div>
+                              <div>
+                                <span class="badge bg-info">17 dias</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div>
+                            <div class="progress mt-3">
+                              <div class="progress-bar" style="width: 70%">
+                                70%
+                              </div>
+                            </div>
+                            <div></div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+
+                  <!-- Card 2 -->
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <a href="Cursos.html">
+                      <div class="card shadow card-proyecto">
+                        <!-- Img card -->
+                        <img
+                          class="card-img-top"
+                          src="https://www.adobe.com/content/dam/cc/us/en/creativecloud/design/discover/vector-file/vector-file_P1_900x420.jpg.img.jpg"
+                          alt=""
+                        />
+                        <!-- Poner encima de la imagen -->
+                        <div class="card-img-overlay icon-star"></div>
+                        <!-- Contenido card -->
+                        <div class="card-body">
+                          <h5 class="card-title">
+                            <strong>Gestion de proyectos</strong>
+                          </h5>
+                          <p class="card-text">Software de almacen</p>
+                          <div class="row">
+                            <div class="col">
+                              <div>
+                                <i class="bi bi-archive"></i>
+                                <span> 10 Tareas</span>
+                              </div>
+                              <div>
+                                <i class="bi bi-people"></i>
+                                <span> 2 integrantes</span>
+                              </div>
+                            </div>
+                            <div class="col text-end">
+                              <div>Avance 4</div>
+                              <div>
+                                <span class="badge bg-info">17 dias</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div>
+                            <div class="progress mt-3">
+                              <div class="progress-bar" style="width: 70%">
+                                70%
+                              </div>
+                            </div>
+                            <div></div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- card 3 -->
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <a href="Cursos.html">
+                      <div class="card shadow card-proyecto">
+                        <!-- Img card -->
+                        <img
+                          class="card-img-top"
+                          src="https://static.vecteezy.com/system/resources/thumbnails/001/907/544/small_2x/flat-design-background-with-abstract-pattern-free-vector.jpg"
+                          alt=""
+                        />
+                        <!-- Poner encima de la imagen -->
+                        <div class="card-img-overlay icon-star"></div>
+                        <!-- Contenido card -->
+                        <div class="card-body">
+                          <h5 class="card-title">
+                            <strong>Curso integrador</strong>
+                          </h5>
+                          <p class="card-text">Proyecto tienda</p>
+                          <div class="row">
+                            <div class="col">
+                              <div>
+                                <i class="bi bi-archive"></i>
+                                <span> 4 Tareas</span>
+                              </div>
+                              <div>
+                                <i class="bi bi-people"></i>
+                                <span> 7 integrantes</span>
+                              </div>
+                            </div>
+                            <div class="col text-end">
+                              <div>Avance 4</div>
+                              <div>
+                                <span class="badge bg-info">17 dias</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div>
+                            <div class="progress mt-3">
+                              <div class="progress-bar" style="width: 70%">
+                                70%
+                              </div>
+                            </div>
+                            <div></div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- Card 4 -->
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <a href="Cursos.html">
+                      <div class="card shadow card-proyecto">
+                        <!-- Img card -->
+                        <img
+                          class="card-img-top"
+                          src="https://static.vecteezy.com/system/resources/previews/006/852/804/original/abstract-blue-background-simple-design-for-your-website-free-vector.jpg"
+                          alt=""
+                        />
+                        <!-- Poner encima de la imagen -->
+                        <div class="card-img-overlay icon-star"></div>
+                        <!-- Contenido card -->
+                        <div class="card-body">
+                          <h5 class="card-title">
+                            <strong>Marco de desarrollo Web</strong>
+                          </h5>
+                          <p class="card-text">Utp+Tasks.</p>
+                          <div class="row">
+                            <div class="col">
+                              <div>
+                                <i class="bi bi-archive"></i>
+                                <span> 4 Tareas</span>
+                              </div>
+                              <div>
+                                <i class="bi bi-people"></i>
+                                <span> 7 integrantes</span>
+                              </div>
+                            </div>
+                            <div class="col text-end">
+                              <div>Avance 4</div>
+                              <div>
+                                <span class="badge bg-info">17 dias</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div>
+                            <div class="progress mt-3">
+                              <div class="progress-bar" style="width: 70%">
+                                70%
+                              </div>
+                            </div>
+                            <div></div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- Card 5 -->
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <a href="Cursos.html">
+                      <div class="card shadow card-proyecto">
+                        <!-- Img card -->
+                        <img
+                          class="card-img-top"
+                          src="https://t3.ftcdn.net/jpg/03/23/88/08/360_F_323880864_TPsH5ropjEBo1ViILJmcFHJqsBzorxUB.jpg"
+                          alt=""
+                        />
+                        <!-- Poner encima de la imagen -->
+                        <div class="card-img-overlay icon-star"></div>
+                        <!-- Contenido card -->
+                        <div class="card-body">
+                          <h5 class="card-title">
+                            <strong>Marco de desarrollo Web</strong>
+                          </h5>
+                          <p class="card-text">Utp+Tasks.</p>
+                          <div class="row">
+                            <div class="col">
+                              <div>
+                                <i class="bi bi-archive"></i>
+                                <span> 4 Tareas</span>
+                              </div>
+                              <div>
+                                <i class="bi bi-people"></i>
+                                <span> 7 integrantes</span>
+                              </div>
+                            </div>
+                            <div class="col text-end">
+                              <div>Avance 4</div>
+                              <div>
+                                <span class="badge bg-info">17 dias</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div>
+                            <div class="progress mt-3">
+                              <div class="progress-bar" style="width: 70%">
+                                70%
+                              </div>
+                            </div>
+                            <div></div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                  <!-- Card 6 -->
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <a href="Cursos.html">
+                      <div class="card shadow card-proyecto">
+                        <!-- Img card -->
+                        <img
+                          class="card-img-top"
+                          src="https://img.freepik.com/premium-vector/vector-mountain-illustration-game-background_303920-21.jpg"
+                          alt=""
+                        />
+                        <!-- Poner encima de la imagen -->
+                        <div class="card-img-overlay icon-star"></div>
+                        <!-- Contenido card -->
+                        <div class="card-body">
+                          <h5 class="card-title">
+                            <strong>Marco de desarrollo Web</strong>
+                          </h5>
+                          <p class="card-text">Utp+Tasks.</p>
+                          <div class="row">
+                            <div class="col">
+                              <div>
+                                <i class="bi bi-archive"></i>
+                                <span> 4 Tareas</span>
+                              </div>
+                              <div>
+                                <i class="bi bi-people"></i>
+                                <span> 7 integrantes</span>
+                              </div>
+                            </div>
+                            <div class="col text-end">
+                              <div>Avance 4</div>
+                              <div>
+                                <span class="badge bg-info">17 dias</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div>
+                            <div class="progress mt-3">
+                              <div class="progress-bar" style="width: 70%">
+                                70%
+                              </div>
+                            </div>
+                            <div></div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <!-- Principal derecha -->
+              <div class="col-3">
+                <!-- Card utp -->
+                <div class="row card-utp mb-3 mt-3 rounded" id="semana">
+                  <div class="col mt-1 mb-3">
+                    <i class="bi bi-clock-fill"></i>
+                    <p class="h3 mb-0 fw-bold text-white">Semana 4</p>
+                    <p class="text-white mb-0">Ciclo regular</p>
+                  </div>
+                  <div class="col mt-2">
+                    <img src="../assets/icons/7230633_3594608.svg" alt="" />
+                  </div>
+                </div>
+                <!-- Card tareas -->
+                <div class="row card-tasks mb-3 rounded" id="tareaPersonal">
+                  <div class="col-3">
+                    <i class="bi bi-check-circle-fill"></i>
+                  </div>
+                  <div class="col-6 text-start">
+                    <p class="numero-tareas text-dark">3</p>
+                  </div>
+
+                  <div class="col-3 pt-3">
+                    <p class="h3 mb-0 fw-bold text-darl">Tareas</p>
+                    <p class="text-dark mb-0">Personales</p>
+                  </div>
+                </div>
+                <!-- Card tareas pendientes -->
+                <div class="card" id="trabajoFechaCard">
+                  <!-- Head -->
+                  <div
+                    class="card-header py-3 d-flex justify-content-between border-bottom-0 card-tareas"
+                  >
+                    <h6 class="mb-0 fw-bold text-white">
+                      Trabajos fecha limite
+                    </h6>
+                  </div>
+                  <!-- Body -->
+                  <div class="card-body">
+                    <!-- Tasks 1 -->
+                    <div class="flex-grow-1">
+                      <div
+                        class="py-2 d-flex align-items-center border-bottom flex-wrap"
+                      >
+                        <div class="d-flex align-items-center flex-fill">
+                          <i class="bi bi-clipboard2-check"></i>
+                          <div class="d-flex flex-column ps-3">
+                            <h6 class="fw-bold mb-0 small-14">
+                              Crear el login
+                            </h6>
+                            <span class="text-muted"
+                              >Marco de desarrollo Web</span
+                            >
+                          </div>
+                        </div>
+                        <div class="time-block text-truncate">
+                          <span class="badge bg-info">En 17 dias</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Tasks 1 -->
+                    <div class="flex-grow-1">
+                      <div
+                        class="py-2 d-flex align-items-center border-bottom flex-wrap"
+                      >
+                        <div class="d-flex align-items-center flex-fill">
+                          <i class="bi bi-clipboard2-check"></i>
+                          <div class="d-flex flex-column ps-3">
+                            <h6 class="fw-bold mb-0 small-14">
+                              Requerimientos
+                            </h6>
+                            <span class="text-muted">Curso integrador</span>
+                          </div>
+                        </div>
+                        <div class="time-block text-truncate">
+                          <span class="badge bg-info">En 14 dias</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Tasks 1 -->
+                    <div class="flex-grow-1">
+                      <div
+                        class="py-2 d-flex align-items-center border-bottom flex-wrap"
+                      >
+                        <div class="d-flex align-items-center flex-fill">
+                          <i class="bi bi-clipboard2-check"></i>
+                          <div class="d-flex flex-column ps-3">
+                            <h6 class="fw-bold mb-0 small-14">Maquetacion</h6>
+                            <span class="text-muted">Gestion de proyectos</span>
+                          </div>
+                        </div>
+                        <div class="time-block text-truncate">
+                          <span class="badge bg-info">En 2 dias</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+    <!-- Modales -->
+    <div
+      class="modal fade"
+      id="crearProyectoModal"
+      tabindex="-1"
+      aria-labelledby="projectModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="projectModalLabel">Nuevo Proyecto</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="projectName" class="form-label"
+                  >Nombre del Proyecto</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="projectName"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="courseName" class="form-label"
+                  >Nombre del Curso</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="courseName"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="startDate" class="form-label"
+                  >Fecha de Inicio</label
+                >
+                <input
+                  type="date"
+                  class="form-control"
+                  id="startDate"
+                  required
+                />
+              </div>
+              <div class="mb-3">
+                <label for="endDate" class="form-label">Fecha Límite</label>
+                <input type="date" class="form-control" id="endDate" required />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Descartar
+            </button>
+            <button type="button" class="btn btn-primary">Crear</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="unirteProyectoModal"
+      tabindex="-1"
+      aria-labelledby="joinProjectModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="joinProjectModalLabel">
+              Unirse a un Proyecto
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- Sección para ingresar un código -->
+            <div class="mb-4">
+              <h6>Ingresar Código del Proyecto</h6>
+              <form>
+                <div class="mb-3">
+                  <label for="projectCode" class="form-label"
+                    >Código del Proyecto</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="projectCode"
+                    placeholder="Ingrese el código"
+                    required
+                  />
+                </div>
+                <button type="submit" class="btn btn-primary">Unirse</button>
+              </form>
+            </div>
+
+            <!-- Sección para mostrar peticiones recientes -->
+            <div>
+              <h6>Últimas Peticiones para Unirse</h6>
+              <ul class="list-group">
+                <!-- Ejemplo de peticiones recientes -->
+                <li
+                  class="list-group-item d-flex justify-content-between align-items-center"
+                >
+                  Oscar - Utp+task - 05/09/2024
+                  <div class="action-buttons">
+                    <button type="button" class="btn btn-success btn-sm">
+                      Unirse
+                    </button>
+                    <button type="button" class="btn btn-danger btn-sm">
+                      Rechazar
+                    </button>
+                  </div>
+                </li>
+                <li
+                  class="list-group-item d-flex justify-content-between align-items-center"
+                >
+                  Jhenifer - Gestor de ventas - 04/09/2024
+                  <div class="action-buttons">
+                    <button type="button" class="btn btn-success btn-sm">
+                      Unirse
+                    </button>
+                    <button type="button" class="btn btn-danger btn-sm">
+                      Rechazar
+                    </button>
+                  </div>
+                </li>
+                <li
+                  class="list-group-item d-flex justify-content-between align-items-center"
+                >
+                  Yared - Plataforma de idiomas - 03/09/2024
+                  <div class="action-buttons">
+                    <button type="button" class="btn btn-success btn-sm">
+                      Unirse
+                    </button>
+                    <button type="button" class="btn btn-danger btn-sm">
+                      Rechazar
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cerrar
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="modal fade"
+      id="editProfileModal"
+      tabindex="-1"
+      aria-labelledby="editProfileModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="editProfileModalLabel">
+              Modificar Perfil
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <!-- Campo para foto de perfil -->
+              <div class="mb-3">
+                <label for="profilePhoto" class="form-label"
+                  >Foto de Perfil</label
+                >
+                <input
+                  class="form-control"
+                  type="file"
+                  id="profilePhoto"
+                  accept="image/*"
+                />
+              </div>
+              <!-- Campo para nombre -->
+              <div class="mb-3">
+                <label for="firstName" class="form-label">Nombre</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstName"
+                  placeholder="Ingrese su nombre"
+                  required
+                />
+              </div>
+              <!-- Campo para apellidos -->
+              <div class="mb-3">
+                <label for="lastName" class="form-label">Apellidos</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastName"
+                  placeholder="Ingrese sus apellidos"
+                  required
+                />
+              </div>
+              <!-- Campo para código de estudiante -->
+              <div class="mb-3">
+                <label for="studentCode" class="form-label"
+                  >Código de Estudiante</label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="studentCode"
+                  placeholder="Ingrese el código de estudiante"
+                  required
+                />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Cancelar
+            </button>
+            <button type="button" class="btn btn-primary">
+              Guardar Cambios
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Scripts -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/7.2.0/intro.min.js"></script>
+    <script src="../Js/userGuide.js"></script>
+    <script src="../Js/Ejemplos.js"></script>
+    <script src="../Js/sidebar.js"></script>
+    <script>
+      feather.replace();
+    </script>
+  </body>
+</html>

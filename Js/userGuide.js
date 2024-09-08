@@ -1,53 +1,57 @@
-introJs().setOptions({
-    steps: [
-    {
-        title: 'Bienvenido a UTASK', //TITULO BIENVENIDA
-        intro: 'Esta guía te ayudara a saber como utilizar la plataforma de UTASK para poder llevar a cabo una'+
-        ' mejor gestión de tus proyectos académicos en equipo' //CONTENIDO
-    },
-    {
-        element: '#home', //ID DEL ELEMENTO AL QUE APUNTARA LA GUIA
-        intro: 'Pagina principal donde puedes crear, unirte y ver tus proyectos'// CONTENIDO
-    },
-    {
-        element: '#calendario',
-        intro: 'Calendario para poder observar las fechas de tus tareas pendientes a lo largo del proyecto'
-    },
-    {
-        element: '#tarea',
-        intro: 'Aquí podras ver las tareas que se han realizado y siguen en curso dentro del proyecto'
-    },
-    {
-        element: '#notif',
-        intro: 'Notificaciones que la plataforma te enviara si se acerca la fecha limite de la realización de una tarea o proyecto'
-    },
-    {
-        element: '#info',
-        intro: 'Información adicional sobre UTASK'
-    },
-    {
-        element: '#email',
-        intro: 'Aquí podras buscar los proyectos en los que estes trabajando'
-    },
-    {
-        element: '#btnCrearProyecto',
-        intro: 'El boton "Crear Proyecto" te permite registrar un nuevo proyecto. Para esto necesitas ingresar los '+
-        'datos del nombre del proyecto, nombre del curso, fecha de inicio y fecha limite'
-    },
-    {
-        element: '#btnUnirseProyecto',
-        intro: 'El boton "Unirte a Proyecto" te permite unirte a un proyecto existente a través de un código. '+
-        'Asimismo, puedes observar las últimas peticiones que otros estudiantes te ofrecen para unirte a sus proyectos'
-    },
-    {
-        element: '#projectCard',
-        intro: 'Aqui podras visualizar algunos datos importantes sobre tus proyectos como el nombre del curso, tareas'+
-        ' pendientes, integrantes, a que avance pertenece y la fecha de finalización'
-    },
-    {
-        element: '#trabajoFechaCard',
-        intro: 'Finalmente, aqui podras ver las fechas limites mas cercanas de los trabajos designados para los distintos proyectos'
-    }
-    
-]
-}).start();
+function startTour() {
+    introJs().setOptions({
+        steps: [
+            {
+                title: 'Bienvenido a UTASK',
+                intro: 'Esta guía te ayudará a saber cómo utilizar la plataforma de UTASK para gestionar mejor tus proyectos académicos en equipo.'
+            },
+            {
+                element: '#home',
+                intro: 'Página principal donde puedes crear, unirte y ver tus proyectos.'
+            },
+            {
+                element: '#calendario',
+                intro: 'Calendario para ver las fechas de tus tareas pendientes en el proyecto.'
+            },
+            {
+                element: '#tarea',
+                intro: 'Aquí puedes ver las tareas realizadas y las que siguen en curso dentro del proyecto.'
+            },
+            {
+                element: '#notif',
+                intro: 'Notificaciones sobre fechas límite de tareas o proyectos.'
+            },
+            {
+                element: '#startTourBtn',
+                intro: 'Si deseas volver a ver este tutorial.'
+            },
+            {
+                element: '#email',
+                intro: 'Aquí puedes buscar los proyectos en los que estás trabajando.'
+            },
+            {
+                element: '#btnCrearProyecto',
+                intro: 'El botón "Crear Proyecto" te permite registrar un nuevo proyecto. Debes ingresar el nombre del proyecto, curso, fecha de inicio y fecha límite.'
+            },
+            {
+                element: '#btnUnirseProyecto',
+                intro: 'El botón "Unirte a Proyecto" te permite unirte a un proyecto existente a través de un código.'
+            },
+            {
+                element: '#projectCard',
+                intro: 'Aquí puedes ver información importante de tus proyectos como el nombre del curso, tareas pendientes, integrantes, y fecha de finalización.'
+            },
+            {
+                element: '#trabajoFechaCard',
+                intro: 'Aquí puedes ver las fechas límite más cercanas para las tareas asignadas en distintos proyectos.'
+            }
+        ]
+    }).start();
+}
+
+window.onload = function() {
+    startTour(); 
+};
+
+
+document.getElementById('startTourBtn').addEventListener('click', startTour);
