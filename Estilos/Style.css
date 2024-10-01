@@ -9,6 +9,11 @@
 
 a {
     text-decoration: none;
+  border: none;
+  box-shadow: none;
+  text-decoration: none;
+  list-style: none; /* Para quitar las viñetas en listas */
+  outline: none;
 }
 
 li {
@@ -22,7 +27,13 @@ body{
     display: flex;
     
 }
+#wrapper.toggled #sidebar {
+    margin-left: 0;
+}
 
+#wrapper.toggled #page-content {
+    width: calc(100% - 250px);
+}
 #sidebar {
     
     width: 70px;
@@ -46,12 +57,21 @@ a.sidebar-link {
     display: block;
     font-size: 0.9rem;
     white-space: nowrap;
-    border-left: 3px solid transparent;
+ 
     
 }
+.arrow{
+    font-size: 1.5rem;
+    margin-left: 90px;
+    color: white;
 
+}
+.Link-side{
+    display: none;
+    font-size: 20px;
+}
 .sidebar-link i {
-    margin-right: 5px;
+    margin-right: 20px;
     font-size: 1.5rem;
 }
 
@@ -97,4 +117,47 @@ a.sidebar-link:hover {
 .profile-section .dropdown-menu .dropdown-item:hover {
     background-color: #004080;
     color: white;
+}
+
+.top-sidebar{
+    display: none;
+}
+
+@media (max-width: 992px) {
+    
+    /* Ajusta el contenido para ocupar todo el ancho cuando el sidebar está escondido */
+    #page-content {
+        width: 100%;
+         margin-top: 56px;
+    }
+    #sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%; /* Ocupa todo el ancho */
+        background-color: rgba(1, 2, 43, 0.959); /* Un fondo semitransparente */
+        z-index: 1050; /* Asegura que esté sobre otros elementos */
+        margin-left: -100%; /* Escondido por defecto */
+        transition: margin 0.3s ease;
+    }
+   
+
+   .Link-side{
+    display: contents;
+   }
+
+   #startTourBtn{
+    display: none;
+   }
+   #notif{
+    display: none;
+     }
+     .top-sidebar{
+        display: contents;
+     }
+
+
+
+
 }

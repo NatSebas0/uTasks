@@ -7,169 +7,66 @@
     <link rel="stylesheet" href="estiloindex.css">
     <title> Inicio </title>
 </head>
-<style>
-        
-    .navbar-toggler-icon{
-        color: whitesmoke;
-    }
 
-
-    body {
-        background: linear-gradient(135deg, #ffffff, #feffff);
-        font-family: 'Poppins', sans-serif;
-    }
-
-    
-    .navbar-custom {
-        background-color: #040253;
-        position: fixed;
-        top: 0;
-        width: 100%;
-        z-index: 9999;
-    }
-
-    .navbar-custom .navbar-brand, .navbar-custom .nav-link {
-        color: #ffffff;
-    }
-
-    .navbar-custom .nav-link:hover {
-        color: #c0c0c0;
-    }
-
-    .btn-login {
-        background-color: #ffffff;
-        color: #001f3f;
-        border: none;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 600;
-    }
-
-    .btn-login:hover {
-        background-color: #f8f9fa;
-        color: #000;
-    }
-
-    .contact-section {
-        padding: 120px 0;
-    }
-
-    .navbar-custom h1,.navbar-custo h2, .navbar-custo h3, .navbar-custo p {
-        color: #093664;
-        font-family: 'Montserrat', sans-serif;
-    }
-
-    footer p {
-        color: #ffffff;
-        font-family: 'Montserrat', sans-serif;
-    }
-    h2 {
-        font-size: 2.5rem;
-        font-weight: 700;
-    }
-
-    h3 {
-        font-size: 1.75rem;
-        font-weight: 600;
-    }
-
-    p, .lead {
-        font-size: 1.1rem;
-        font-weight: 300;
-        line-height: 1.6;
-    }
-
-    
-    .btn-custom {
-        background-color: #2e43ff;
-        color: #ffffff;
-        font-family: 'Montserrat', sans-serif;
-        font-weight: 600;
-        border: none;
-        padding: 10px 20px;
-    }
-
-    .btn-custom:hover {
-        background-color: #0741ff;
-        color: #ffffff;
-    }
-
-   
-    footer {
-        background-color: #040253;
-        color: #ffffff;
-        padding: 20px 0;
-        font-family: 'Montserrat', sans-serif;
-    }
-
-    footer a {
-        color: #ffffff;
-        font-weight: 550;
-    }
-
-   
-    .form-control {
-        background-color: #f8f9fa;
-        border: none;
-        border-radius: 0;
-        box-shadow: none;
-        font-family: 'Poppins', sans-serif;
-    }
-
-    .form-control:focus {
-        box-shadow: none;
-        border: 1px solid #ffffff;
-    }
-
-    
-    .footer-bottom {
-        text-align: center;
-        margin-top: 10px;
-        font-size: 0.9rem;
-        font-family: 'Poppins', sans-serif;
-    }
-</style>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-custom">
+     <!-- Nav -->
+     <nav class="navbar navbar-expand-sm navbar-dark fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="assets/icons/logo white.svg" alt="Logo" width="150" height="85" class="d-inline-block align-top">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="bi bi-list text-white h1"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Página Principal</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active text-white" aria-current="page" href="Paginas/Contactanos_utasks.html">Contactos</a>
-                    </li>
-                </ul>
-                <a href="Paginas/Pagina-Login.html">
-                    <button class="btn btn-login ms-3">Iniciar Sesión</button>
-                </a>
-                    
-            </div>
+          <a class="navbar-brand" href="#">
+            <img src="assets/icons/Diseño sin título (7).svg" alt=""  width="150px"/>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav ms-auto mb-2 mb-md-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Principal</a
+                >
+              </li>
+            
+             
+              <li class="nav-item">
+                <a href="#" class="nav-link" aria-disabled="true">Contacto</a>
+              </li>
+            </ul>
+          </div>
         </div>
-    </nav>
-    <section>
-        <div class="p1 container-fluid pt-5">
+      </nav>
+    <section class="container-max container-1">
+        <div class="p1   pt-5">
             <div class="row">
                 <div class="a1 col-xl-6 col-md-12 col-sm-12" >
-                     <img  class="logo" src="assets/icons/Logo black.svg" alt="Logo UTasks">
-                     <h1> Transforma la Gestión de tus Proyectos con UTP+Tasks </h1>
-                     <p> Una plataforma diseñada para simplificar la organización de tus proyectos académicos </p>
-                     <a href="Paginas/Pagina-Login.html" class="boton-ingresa">Ingresa aquí</a>
+                     <p class="h1 bold"><strong>
+                        Transforma la Gestión de tus Proyectos con UTP+Tasks
+                     </strong> </p>
+                     <p class="h5"> Una plataforma diseñada para simplificar la organización de tus proyectos académicos </p>
+                     <div class="mt-5">
+                        <a href="Paginas/Pagina-Login.html">
+                            <button type="button" class="btn btn-lg  btn-ingresar"> <strong>
+                                Ingresa aqui
+                            </strong></button>
+
+                        </a>
+                     </div>
                 </div>
-                <div class="col-xl-6">
-                     <img class="disp" src="assets/img/dispositivos.png" alt="Imagen de pantalla y móvil">
+                <div class="col-xl-6 ">
+                     <img class="disp" src="assets/icons/Principal-imgae.gif" alt="Imagen de pantalla y móvil">
                 </div>
             </div>
         </div>
     </section>
-    <section>
-        <div class="p2 container-fluid pt-5">
+    <section class="container-max">
+        <div class="p2 pt-5">
             <div class="b1 row">
                 <div class="col-xl-5 col-md-12 col-sm-12 order-md-1 order-2">
                     <h2>Gestión de Proyectos ingresando a la plataforma de utp+tasks</h2>
@@ -222,7 +119,7 @@
         </div>
     </section>
     <section>
-        <div class="p3 container-fluid mt-5">
+        <div class="p3 container mt-5">
             <h2 class="text-center"> Soluciones para Optimizar tus Proyectos </h2>
             <p class="text-center"> Descubre las funcionalidades clave de UTP+Tasks para organizar y llevar tus proyectos al siguiente nivel. </p>
             <div class="row text-center">
@@ -273,7 +170,7 @@
         </div>
     </div>
     <section>
-        <div class="p4g container-fluid pt-5">
+        <div class="p4g container pt-5">
             <div class="a2 row">
                 <div class="boton col-xl-6 col-md-12 col-sm-12 order-md-1 order-2 text-center text-md-start">
                     <h2>Gestión de Proyectos</h2>
@@ -287,7 +184,7 @@
                 </div>
             </div>
         </div>
-        <div class="p4 container-fluid pt-5">
+        <div class="p4 container pt-5">
             <div class="row">
                 <div class="col-xl-6 col-md-12 col-sm-12 order-md-1 order-2 text-center text-md-start">
                     <img class="disp" src="assets/img/Integracion-Cursos.png" alt="">
@@ -301,7 +198,7 @@
                 </div>
             </div>
         </div>
-        <div class="p4g container-fluid pt-5">
+        <div class="p4g container pt-5">
             <div class="a2 row">
                 <div class="col-xl-6 col-md-12 col-sm-12 order-md-1 order-2 text-center text-md-start">
                     <h2>Colaboración en Tiempo Real</h2>
@@ -315,7 +212,7 @@
                 </div>
             </div>
         </div>
-        <div class="p4 container-fluid pt-5">
+        <div class="p4 container pt-5">
             <div class="row">
                 <div class="col-xl-6 col-md-12 col-sm-12 order-md-1 order-2 text-center text-md-start">
                     <img class="disp" src="assets/img/dispositivos.png" alt="">
@@ -330,29 +227,18 @@
             </div>
         </div>
     </section>
-    <footer class="text-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h5><b>VISITANOS EN:</b></h5>
-                    <p>Ctra. Panamericana Sur km 16, Villa EL Salvador, Lima<br>01 345 6789<br>gestiones@utasks.com</p>
-                </div>
-                <div class="col-md-4">
-                    <h5><b>NUESTRAS REDES:</b></h5>
-                    <a href="https://www.facebook.com/UTP.Peru" target="_blank"><i class="bi bi-facebook"></i> Facebook</a><br>
-                    <a href="https://x.com/UTP_PERU" target="_blank"><i class="bi bi-twitter"></i>X (Ex Twitter)</a><br>
-                    <a href="https://www.instagram.com/universidadutp/" target="_blank"><i class="bi bi-instagram"></i> Instagram</a>
-                </div>
-                <div class="col-md-4">
-                    <h5><b>HORARIOS DE ATENCIÓN:</b></h5>
-                    <p>Lunes - Viernes: 9 AM - 6 PM<br>Sábados: 9 AM - 1 PM</p>
-                </div>
+  
+    <footer class="bg-dark text-white pt-3 pb-3">
+        <div class="container text-center text-md-left">
+          <div class="row">
+            <div class="col-12">
+              <p class="mb-0">
+                © 2024 Utask. Todos los derechos reservados.
+              </p>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 UTASKS. Todos los derechos reservados.</p>
-            </div>
+          </div>
         </div>
-    </footer>
+      </footer>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>

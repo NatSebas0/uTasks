@@ -2,28 +2,21 @@ html, body {
     overflow-x: hidden;
 }
 
-/* header */
 
-header {
-    background-color: #f8f9fa;
-    padding: 10px 20px;
-    overflow-x: auto;
-}
-header .container-fluid {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-header img {
-    max-height: 50px;
-}
-header .btn {
-    margin-left: 10px;
-    padding: 10px 20px;
+
+.container-max{
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 /* Sección 1 */
 
+.container-1{
+    height: 90vh   ;
+}
+
+.h1{
+}
 .p1 {
     margin-top: 100px;
     margin-bottom: 100px;
@@ -31,30 +24,20 @@ header .btn {
 .logo {
     max-width: 40%
 }
-.p1 h1 {
-    font-size: 60px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-}
-.p1 p {
-    font-size: 26px;
-    margin-bottom: 40px;
-}
+
 .a1 {
     margin-left: 50px;
 }
-.boton-ingresa {
-    background-color: #145dac;
+.btn-ingresar {
+    background-color: #32373d;
     color: white;
-    padding: 10px 30px; 
-    border: 2px solid #145dac;
-    border-radius: 5px; 
-    font-size: 30px;
-    cursor: pointer; 
+    border-radius: 10px; 
     text-decoration: none;
-}
-.boton-ingresa:hover {
-    background-color: #1c77d8;
+font-size: 24px;}
+.btn-ingresar:hover {
+    background-color: #031f44;
+    color: white;
+
 }
 .disp {
     max-width: 85%;
@@ -227,191 +210,9 @@ header .btn {
 }
 
 /* Responsividad */
+    
+.navbar{
+    background-color: #070F2B;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ajusta los valores según tus necesidades */
 
-@media (max-width: 768px) {
-    header .container-fluid {
-        flex-wrap: nowrap;
-        overflow-x: auto;
-    }
-    header img {
-        max-height: 40px;
-    }
-    header .btn {
-        font-size: 14px;
-        padding: 10px 18px;
-    }
-    .p1 h1 {
-        font-size: 40px;
-        text-align: center;
-    }
-    .p1 p {
-        font-size: 20px;
-    }
-    .p1 .row {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .a1 {
-        margin-left: 0 ;
-        margin-bottom: 50px;
-    }
-    .a1 a, .logo {
-        margin-left: 100px;
-    }
-    .disp {
-        margin-left: 30px;
-    }
-    .boton-ingresa {
-        font-size: 24px;
-        padding: 8px 20px;
-    }
-    .p2 h2 {
-        text-align: center;
-        padding-top: 50px;
-        font-size: 30px;
-    }
-    .p2 {
-        padding: 20px;
-    }
-    .info-item {
-        margin-bottom: 20px;
-    }
-    .b1 {
-        margin-top: 30px;
-        margin-bottom: 30px;
-    }
-    .p3 h2, .p3 p {
-        text-align: center;
-    }
-    .p3 .c1, .c2, .c3 {
-        margin-bottom: 20px;
-    }
-    .p3 .row {
-        flex-wrap: wrap;
-        margin-left: 0;
-        margin-right: 0;
-    }
-    .p4g h2, .p4 h2 {
-        font-size: 28px;
-    }
-    .p4g p, .p4 p {
-        font-size: 18px;
-    }
-    .p4g, .p4 {
-        padding-bottom: 20px;
-        text-align: center;
-    }
-    .a2 {
-        margin-left: 0;
-    }
-    .disp {
-        margin-top: 20px;
-    }
-    .boton-miralo {
-        font-size: 20px;
-        padding: 8px 20px;
-    }
-    .p4g .boton-miralo {
-        margin-left: 0;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    header .container-fluid {
-        flex-wrap: nowrap;
-        overflow-x: auto;
-    }
-    header img {
-        max-height: 50px;
-    }
-    header .btn {
-        font-size: 14px;
-        padding: 12px 45px;
-    }
-    .p1 h1 {
-        font-size: 40px;
-        text-align: center;
-    }
-    .p1 p {
-        font-size: 20px;
-        text-align: center;
-    }
-    .p1 .row {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .a1 {
-        margin-left: 0 ;
-        margin-bottom: 50px;
-    }
-    .a1 a {
-        margin-left: 280px;
-    }
-    .logo {
-        margin-left: 220px;
-    }
-    .disp {
-        margin-left: 60px;
-    }
-    .boton-ingresa {
-        font-size: 24px;
-        padding: 8px 20px;
-    }
-    .p2 h2 {
-        text-align: center;
-        padding-top: 50px;
-        font-size: 40px;
-    }
-    .p2 h3 {
-        font-size: 24px;
-    }
-    .p2 p {
-        font-size: 20px;
-    }
-    .p2 {
-        padding: 20px;
-    }
-    .b2 {
-        padding-top: 50px;
-    }
-    .info-item {
-        margin-bottom: 20px;
-    }
-    .b1 {
-        margin-top: 30px;
-        margin-bottom: 30px;
-    }
-    .p3 h2, .p3 p {
-        text-align: center;
-    }
-    .p3 .c1, .c2, .c3 {
-        margin-bottom: 20px;
-    }
-    .p3 .row {
-        flex-wrap: wrap;
-        margin-left: 0;
-        margin-right: 0;
-    }
-    .p4g h2, .p4 h2 {
-        font-size: 28px;
-        text-align: center;
-    }
-    .p4g p, .p4 p {
-        font-size: 18px;
-        text-align: center;
-    }
-    .p4g, .p4 {
-        padding-bottom: 20px;
-        align-items: center;
-    }
-    .disp {
-        margin-top: 20px;
-    }
-    .boton-miralo {
-        font-size: 20px;
-        padding: 10px 24px;
-    }
-    .p4g .boton-miralo {
-        margin-left: 300px;
-    }
 }

@@ -66,9 +66,13 @@
       </div>
     </div>
     <!--Container  -->
-    <div class="wrapper">
+    <div class="wrapper" id="wrapper">
       <!-- Sidebar -->
       <aside id="sidebar">
+        <div class="p-3 top-sidebar">
+          <img src="../assets/icons/logo white.svg" alt="" width="200" />
+          <i class="bi bi-arrow-left arrow" id="cerrar"></i>
+        </div>
         <ul class="sidebar-nav">
           <li class="sidebar-item">
             <a
@@ -78,9 +82,10 @@
               class="sidebar-link"
               data-bs-toggle="tooltip"
               data-bs-placement="right"
-              title="principal"
+              title="Principal"
             >
-              <i class="bi bi-house"></i>
+              <i class="bi bi-house"> </i>
+              <span class="Link-side"> Principal </span>
             </a>
           </li>
           <li class="sidebar-item" id="calendario">
@@ -91,7 +96,8 @@
               data-bs-placement="right"
               title="Calendario"
             >
-              <i class="bi bi-calendar3"></i>
+              <i class="bi bi-calendar3"> </i>
+              <span class="Link-side"> Calendario </span>
             </a>
           </li>
           <li
@@ -103,7 +109,8 @@
             title="Tareas"
           >
             <a href="resumetareas.html" class="sidebar-link">
-              <i class="bi bi-clipboard2-check"></i>
+              <i class="bi bi-clipboard2-check"> </i>
+              <span class="Link-side"> Tareas </span>
             </a>
           </li>
 
@@ -114,12 +121,12 @@
               type="button"
               data-bs-toggle="offcanvas"
               data-bs-target="#demo"
-              class="sidebar-link"
               data-bs-toggle="tooltip"
               data-bs-placement="right"
               title="Notificaciones"
             >
-              <i class="bi bi-bell"></i>
+              <i class="bi bi-bell"> </i>
+              <span class="Link-side"> Notificaciones </span>
             </a>
           </li>
         </ul>
@@ -133,7 +140,8 @@
             data-bs-placement="right"
             title="Informacion"
           >
-            <i  class="bi bi-question-circle"></i>
+            <i class="bi bi-question-circle"> </i>
+            <span class="Link-side"> Calendario </span>
           </a>
         </div>
         <div class="profile-section dropdown">
@@ -144,6 +152,8 @@
             data-bs-toggle="dropdown"
             aria-expanded="false"
           />
+          <p></p>
+
           <ul class="dropdown-menu" aria-labelledby="profileDropdown">
             <li>
               <a
@@ -166,6 +176,16 @@
       <!-- Principal -->
       <main class="container-fluid contenedor-principal">
         <div class="row">
+          <nav class="navbar navbar-expand-lg navbar-dark bg-dark d-lg-none fixed-bottom">
+            <div class="container-fluid">
+              <div>
+                <img width="100" src="../assets/icons/logo white.svg" alt="" />
+              </div>
+              <button class="btn btn-outline-light" id="menu-toggle">
+                <i class="bi bi-list"></i>
+              </button>
+            </div>
+          </nav>
           <!-- Principal Top -->
           <section class="col-12 principal-top p-2">
             <img src="../assets/icons/logo white.svg" alt="" width="130" />
@@ -174,9 +194,13 @@
           <section class="col-12">
             <div class="row">
               <!-- Principal izquierda -->
-              <div class="col-9 p-3">
+              <div class="col-12 col-lg-9 p-3">
                 <!-- Carousel -->
-                <div id="demo" class="carousel slide" data-bs-ride="carousel">
+                <div
+                  id="demo"
+                  class="carousel slide d-none d-md-block mb-4"
+                  data-bs-ride="carousel"
+                >
                   <!-- Indicators/dots -->
                   <div class="carousel-indicators">
                     <button
@@ -228,9 +252,9 @@
                   <!-- Left and right controls/icons -->
                 </div>
                 <!-- Titulo/ Botones -->
-                <div class="row mt-4">
+                <div class="row">
                   <!-- Titulo -->
-                  <div class="col">
+                  <div class="col mt-2">
                     <div class="d-flex align-items-center">
                       <p class="h3 me-4"><strong>Proyectos </strong></p>
                       <input
@@ -243,7 +267,7 @@
                     </div>
                   </div>
                   <!-- Botones -->
-                  <div class="col text-end">
+                  <div class="col-12 col-md-6 text-end mt-2">
                     <button
                       id="btnCrearProyecto"
                       type="button"
@@ -560,20 +584,23 @@
                 </div>
               </div>
               <!-- Principal derecha -->
-              <div class="col-3">
+              <div class="col-3 col-3 d-none d-lg-block">
                 <!-- Card utp -->
                 <div class="row card-utp mb-3 mt-3 rounded" id="semana">
-                  <div class="col mt-1 mb-3">
+                  <div class="col-12 col-md-6 mt-1 mb-3">
                     <i class="bi bi-clock-fill"></i>
                     <p class="h3 mb-0 fw-bold text-white">Semana 4</p>
                     <p class="text-white mb-0">Ciclo regular</p>
                   </div>
-                  <div class="col mt-2">
+                  <div class="col-12 col-md-6 mt-2 text-center">
                     <img src="../assets/icons/7230633_3594608.svg" alt="" />
                   </div>
                 </div>
                 <!-- Card tareas -->
-                <div class="row card-tasks mb-3 rounded" id="tareaPersonal">
+                <div
+                  class="row card-tasks mb-3 rounded d-none d-lg-flex"
+                  id="tareaPersonal"
+                >
                   <div class="col-3">
                     <i class="bi bi-check-circle-fill"></i>
                   </div>
@@ -934,6 +961,28 @@
     <script src="../Js/sidebar.js"></script>
     <script>
       feather.replace();
+    </script>
+    <script>
+      document
+        .getElementById("menu-toggle")
+        .addEventListener("click", function () {
+          document.getElementById("wrapper").classList.toggle("toggled");
+        });
+      // Manejar el clic en el botón de cerrar el sidebar
+      document.getElementById("cerrar").addEventListener("click", function () {
+        document.getElementById("wrapper").classList.toggle("toggled");
+      });
+
+      // Manejar el clic en los enlaces del sidebar
+      document.querySelectorAll("#sidebar a").forEach(function (link) {
+  link.addEventListener("click", function (event) {
+    // Evitar el comportamiento por defecto del enlace
+      
+    // Ocultar el sidebar después de hacer clic en un enlace
+    document.getElementById("wrapper").classList.remove("toggled");
+  });
+});
+
     </script>
   </body>
 </html>
