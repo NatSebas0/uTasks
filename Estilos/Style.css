@@ -8,7 +8,7 @@
 }
 
 a {
-    text-decoration: none;
+text-decoration: none;
   border: none;
   box-shadow: none;
   text-decoration: none;
@@ -57,8 +57,7 @@ a.sidebar-link {
     display: block;
     font-size: 0.9rem;
     white-space: nowrap;
- 
-    
+  
 }
 .arrow{
     font-size: 1.5rem;
@@ -128,7 +127,7 @@ a.sidebar-link:hover {
     /* Ajusta el contenido para ocupar todo el ancho cuando el sidebar está escondido */
     #page-content {
         width: 100%;
-         margin-top: 56px;
+        margin-top: 56px;
     }
     #sidebar {
         position: fixed;
@@ -157,7 +156,27 @@ a.sidebar-link:hover {
         display: contents;
      }
 
+     .contenedor-principal{
+        padding-bottom: 56px;
+     }
 
+    .sidebar-herramientas{
+        height: auto;
+    }
+    .titulo{
+        margin-bottom: 0;
+    }
 
-
+     
 }
+
+nav{
+    background-color: #000428;
+}
+
+
+.nav-text{
+    color: white;
+    font-size: 10px;
+}
+

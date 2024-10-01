@@ -14,15 +14,15 @@
       integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="../Estilos/Style.css" />
     <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
     />
     <link rel="stylesheet" href="../Estilos/Inicio-Estilo.css" />
     <link rel="stylesheet" href="../Estilos/TaskPrincipal.css" />
     <link rel="stylesheet" href="../Estilos/TaskCursos.css" />
     <link rel="stylesheet" href="../Estilos/Drag.css" />
+    <link rel="stylesheet" href="../Estilos/Style.css" />
     <script type="text/javascript">
       window.onload = () => {
         const modal = new bootstrap.Modal("#modalTutorial");
@@ -157,14 +157,37 @@
           </ul>
         </div>
       </aside>
+      <!-- Nav para celulares y tablets -->
+      <nav class="navbar navbar-expand-lg d-lg-none fixed-bottom">
+        <div class="container-fluid">
+          <div class="col text-center">
+            <a href="Cursos.html">
+              <i class="bi bi-bookmark-check-fill text-white h2"></i>
+              <p class="mb-0 nav-text">Tareas</p>
+            </a>
+          </div>
+          <div class="col text-center">
+            <a href="CursosConfi.html">
+              <i class="bi bi-gear-fill text-white h2"> </i>
+              <p class="mb-0 nav-text">Configuracion</p>
+            </a>
+          </div>
+          <div class="col text-center">
+            <a href="CursosIntegrantes.html">
+              <i class="bi bi-person-lines-fill text-white h2"> </i>
+              <p class="mb-0 nav-text">Equipo</p>
+            </a>
+          </div>
+        </div>
+      </nav>
       <!-- Principal -->
       <main class="container-fluid">
         <div class="row">
           <!-- sidebar blanco -->
-          <div class="col-2 pe-0 ps-0">
+          <div class="col-12 col-lg-2 pe-0 ps-0">
             <div class="sidebar-herramientas">
               <div
-                class="col ps-5 pe-4 text-start texto-side mb-4 text-white d-flex justify-content-between align-items-center"
+                class="col ps-5 pe-4 text-start texto-side  text-white d-flex justify-content-between align-items-center titulo"
               >
                 <div>
                   <p class="h5 mb-0"><strong>Taller Web</strong></p>
@@ -177,14 +200,13 @@
                 </div>
               </div>
 
-              <div class="text-center">
-                <a href="Cursos.html">
+              <div class="d-none d-lg-block text-center mt-4">
+                <a href="">
                   <button
                     type="button"
-                    class="btn w-75 mb-4 btn-side text-start"
+                    class="btn w-75 mb-4 btn-press btn-side text-start"
                   >
-                    <i class="bi bi-bookmark-check-fill pe-3"></i
-                    ><strong>Tareas</strong>
+                    <i class="bi bi-bookmark-check-fill pe-3"></i><strong>Tareas</strong>
                   </button>
                 </a>
                 <a href="Cursos -drag.html">
@@ -208,7 +230,7 @@
                 <a href="CursosConfi.html">
                   <button
                     type="button"
-                    class="btn w-75 mb-4 btn-side text-start btn-press"
+                    class="btn w-75 mb-4 btn-side text-start"
                   >
                     <i class="bi bi-gear-fill pe-3"></i>
                     <strong>Configuracion</strong>
@@ -230,8 +252,28 @@
           <div class="col contenedor-principal">
             <div class="row">
               <!-- Principal Top -->
-              <section class="col-12 principal-top p-2">
-                <img src="../assets/icons/logo white.svg" alt="" width="130" />
+              <section class="d-none d-lg-block principal-top p-2 ">
+              
+                <div class="container-fluid d-flex">
+                  <div class="col">
+                    <img
+                      src="../assets/icons/logo white.svg"
+                      alt=""
+                      width="130"
+                    />
+                  </div>
+                  
+                  <div class="col text-end mt-2 d-lg-none">
+                    <a href="PrincipalCursos.html">
+                      <i
+                        class="bi bi-arrow-left-circle icon-side text-white h1"
+                      >
+                      </i>
+                    </a>
+                  </div>
+                </div>
+
+                
               </section>
               <!-- Principal bootom -->
               <section class="col-12">

@@ -67,7 +67,7 @@
     </div>
     <!--Container  -->
     <div class="wrapper" id="wrapper">
-      <!-- Sidebar -->
+      <!-- Sidebar para pc -->
       <aside id="sidebar">
         <div class="p-3 top-sidebar">
           <img src="../assets/icons/logo white.svg" alt="" width="200" />
@@ -173,22 +173,55 @@
           </ul>
         </div>
       </aside>
+      <!-- Nav para celulares y tablets -->
+      <nav class="navbar navbar-expand-lg d-lg-none fixed-bottom">
+        <div class="container-fluid">
+            <div class="col text-center">
+              <a href="PrincipalCursos.html">
+                <i class="bi bi-house text-white h2"> </i>
+                <p class="mb-0  nav-text">Principal</p>
+              </a>
+            </div>
+            <div class="col text-center">
+              <a href="calendario.html">
+                <i class="bi bi-calendar3 text-white h2"> </i>
+                <p class="mb-0  nav-text">Calendario</p>
+
+            </a>
+            </div>
+            <div class="col text-center">
+              <a href="resumetareas.html">
+                <i class="bi bi-clipboard2-check text-white h2"> </i>
+                <p class="mb-0  nav-text">Tareas</p>
+
+              </a>
+            </div>
+        </div>
+      </nav>
       <!-- Principal -->
       <main class="container-fluid contenedor-principal">
         <div class="row">
-          <nav class="navbar navbar-expand-lg navbar-dark bg-dark d-lg-none fixed-bottom">
-            <div class="container-fluid">
-              <div>
-                <img width="100" src="../assets/icons/logo white.svg" alt="" />
-              </div>
-              <button class="btn btn-outline-light" id="menu-toggle">
-                <i class="bi bi-list"></i>
-              </button>
-            </div>
-          </nav>
           <!-- Principal Top -->
           <section class="col-12 principal-top p-2">
-            <img src="../assets/icons/logo white.svg" alt="" width="130" />
+           <div class="container-fluid d-flex">
+
+             <div class="col">
+               <img src="../assets/icons/logo white.svg" alt="" width="130" />
+             </div>
+             <div class="col text-end mt-2 d-lg-none"> 
+               <a
+                 href="#"
+      
+                 type="button"
+                 data-bs-toggle="offcanvas"
+                 data-bs-target="#demo"
+                
+               >
+                 <i class="bi bi-bell text-white h1 "></i>
+               </a>
+             </div>
+
+           </div>
           </section>
           <!-- Principal bootom -->
           <section class="col-12">
@@ -584,7 +617,7 @@
                 </div>
               </div>
               <!-- Principal derecha -->
-              <div class="col-3 col-3 d-none d-lg-block">
+              <div class="col-3 d-none d-lg-block">
                 <!-- Card utp -->
                 <div class="row card-utp mb-3 mt-3 rounded" id="semana">
                   <div class="col-12 col-md-6 mt-1 mb-3">
@@ -975,14 +1008,13 @@
 
       // Manejar el clic en los enlaces del sidebar
       document.querySelectorAll("#sidebar a").forEach(function (link) {
-  link.addEventListener("click", function (event) {
-    // Evitar el comportamiento por defecto del enlace
-      
-    // Ocultar el sidebar después de hacer clic en un enlace
-    document.getElementById("wrapper").classList.remove("toggled");
-  });
-});
+        link.addEventListener("click", function (event) {
+          // Evitar el comportamiento por defecto del enlace
 
+          // Ocultar el sidebar después de hacer clic en un enlace
+          document.getElementById("wrapper").classList.remove("toggled");
+        });
+      });
     </script>
   </body>
 </html>
